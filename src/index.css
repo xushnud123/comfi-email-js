@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@font-face {
+  font-family: 'NeueMachina';
+    src: url('../src/asstes/family/NeueMachina-Regular.otf'); /* IE9 Compat Modes */
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gordita';
+    src: url('../src/asstes/family/Gordita.otf'); /* IE9 Compat Modes */
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gordita Medium';
+    src: url('../src/asstes/family/Gordita\ Medium.otf'); /* IE9 Compat Modes */
+    font-weight: 500;
+    font-style: normal;
+}

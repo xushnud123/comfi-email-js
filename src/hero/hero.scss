@@ -1,0 +1,260 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #1e1e1e;
+  //   transition: all linear 0.225s;
+  position: relative;
+  &::before {
+    // transition: all linear 0.225s;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../asstes/img/Vector.svg);
+  }
+  .container {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 204px 20px 205px 20px;
+    @media screen and (max-width: 1300px) {
+      padding: 124px 20px 125px 20px;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 74px 20px 75px 20px;
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        cursor: pointer;
+        width: 221px;
+        height: 75px;
+        margin-right: 15px;
+        @media screen and (max-width: 768px) {
+          width: 180px;
+          height: auto;
+        }
+        @media screen and (max-width: 450px) {
+          width: 150px;
+          height: auto;
+        }
+      }
+    }
+    .title {
+      margin-top: 64px;
+      margin-bottom: 64px;
+      text-align: center;
+      font-family: "NeueMachina";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 128px;
+      line-height: 124px;
+      text-align: center;
+      color: #51fc8f;
+      @media screen and (max-width: 1300px) {
+        font-size: 98px;
+        line-height: 94px;
+        margin-top: 54px;
+        margin-bottom: 54px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 78px;
+        line-height: 74px;
+        margin-top: 44px;
+        margin-bottom: 44px;
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 58px;
+        line-height: 54px;
+        margin-top: 34px;
+        margin-bottom: 34px;
+      }
+      @media screen and (max-width: 380px) {
+        font-size: 43px;
+        line-height: 44px;
+      }
+    }
+    .description {
+      text-align: center;
+      font-family: "Gordita";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 100%;
+      color: #ffffff;
+      //  transition: all linear 0.225s;
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+    form {
+      margin-top: 128px;
+      display: flex;
+      justify-content: center;
+      @media screen and (max-width: 768px) {
+        margin-top: 64px;
+      }
+      .inputWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 643px;
+        height: 96px;
+        transition: all ease-in-out 0.225s;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          max-width: 643px;
+          height: 66px;
+        }
+        @media screen and (max-width: 500px) {
+          height: 152px;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+        .email {
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          padding: 0 0 0 23px;
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 32px;
+          border: none;
+          &:focus-visible {
+            outline: none;
+          }
+          font-family: "Gordita";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 100%;
+          color: rgba(255, 255, 255, 0.6);
+          @media screen and (max-width: 768px) {
+            border-radius: 27px;
+            font-size: 20px;
+          }
+          @media screen and (max-width: 500px) {
+            height: 66px;
+          }
+           @media screen and (max-width:440px){
+            font-size: 16px;
+           }
+        }
+        .btn {
+          cursor: pointer;
+          width: 212px;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          border-radius: 32px;
+          border: none;
+          font-family: "Gordita Medium";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 100%;
+          color: #000000;
+          padding: 5px 10px;
+          //   transition: all linear 0.2s;
+          background: #fff;
+          &:hover {
+            box-shadow: rgba(200, 210, 220, 0.9) 0px 4px 12px;
+          }
+          @media screen and (max-width: 768px) {
+            width: 160px;
+            border-radius: 27px;
+            font-size: 20px;
+          }
+          
+          @media screen and (max-width: 500px) {
+            height: 66px;
+            width: 100%;
+            box-sizing: border-box;
+          }
+          &:disabled {
+            background: #fff;
+            cursor: auto;
+            &:hover {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+      .inputActiv {
+        @media screen and (max-width: 500px) {
+           height: 66px;
+         }
+        .btn {
+          width: 100%;
+          font-size: 22px;
+          @media screen and (max-width: 768px) {
+            
+            font-size: 20px;
+          }
+           @media screen and (max-width: 440px) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .notify {
+      text-align: center;
+      margin-top: 64px;
+      font-family: "Gordita";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 100%;
+      color: rgba(255, 255, 255, 0.5);
+      //  transition: all linear 0.225s;
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 360px) {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+.active {
+  background: #ffffff;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../asstes/img/Vector2.svg);
+  }
+  .container {
+    .description {
+      color: #000000;
+    }
+    form {
+      .inputWrapper {
+        .email {
+          background: rgba(0, 0, 0, 0.05);
+          color: rgba(0, 0, 0, 0.6);
+        }
+        .btn {
+          background: #000000 !important;
+          color: #fff;
+          &:hover {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          }
+        }
+      }
+    }
+    .notify {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
