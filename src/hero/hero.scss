@@ -2,10 +2,11 @@
   width: 100%;
   min-height: 100vh;
   background: #ffffff;
-    // transition: all ease 0.125s;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &::before {
-    // transition: all linear 0.225s;
     content: "";
     position: absolute;
     width: 100%;
@@ -19,10 +20,7 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    padding: 80px 20px 85px 20px;
-    @media screen and (max-width: 768px) {
-      padding: 74px 20px 75px 20px;
-    }
+    padding: 0 15px;
     .logo {
       display: flex;
       justify-content: center;
@@ -46,14 +44,14 @@
       margin-bottom: 44px;
       display: flex;
       justify-content: center;
-      img{
+      img {
         width: 600px;
         height: auto;
       }
       @media screen and (max-width: 768px) {
         margin-top: 44px;
         margin-bottom: 44px;
-        img{
+        img {
           width: 100%;
         }
       }
@@ -112,12 +110,22 @@
           &:focus-visible {
             outline: none;
           }
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus {
+            -webkit-text-fill-color: rgba(0, 0, 0, 0.6);
+            font-family: "Gordita";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            transition: background-color 5000s ease-in-out 0s;
+          }
           font-family: "Gordita";
           font-style: normal;
           font-weight: 400;
           font-size: 24px;
           line-height: 100%;
-            background: rgba(0, 0, 0, 0.05);
+          background: rgba(0, 0, 0, 0.05);
           color: rgba(0, 0, 0, 0.6);
           @media screen and (max-width: 768px) {
             font-size: 20px;
@@ -143,10 +151,10 @@
           font-weight: 500;
           font-size: 24px;
           line-height: 100%;
-           background: #000000 !important;
+          background: #000000 !important;
           color: #fff;
-          padding: 5px 10px;
-            transition: all linear 0.2s;
+          padding: 7.5px 15px;
+          transition: all linear 0.2s;
           &:hover {
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           }
@@ -164,7 +172,7 @@
               width: 40px;
               height: 40px;
               border-radius: 50%;
-               border: 4px solid #fff;
+              border: 4px solid #fff;
               border-color: #fff transparent #fff transparent;
               animation: lds-dual-ring 1.2s linear infinite;
             }
@@ -196,10 +204,13 @@
           width: 100%;
           font-size: 22px;
           @media screen and (max-width: 768px) {
-            font-size: 20px;
+            font-size: 18px;
           }
           @media screen and (max-width: 440px) {
             font-size: 16px;
+          }
+          @media screen and (max-width: 400px) {
+            font-size: 14px;
           }
         }
       }
@@ -224,46 +235,56 @@
     }
   }
   @media (prefers-color-scheme: dark) {
-       background: #1e1e1e;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: url(../asstes/img/Vector.svg);
-    
-  }
-  .container {
-    .description {
-      color: #fff;
+    background: #1e1e1e;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: url(../asstes/img/Vector.svg);
     }
-    form {
-      .inputWrapper {
-        .email {
-          background: rgba(255, 255, 255, 0.05);
-          color: rgba(255, 255, 255, 0.6);
-        }
-        .btn {
-                   color: #000000;
-          background: #fff !important;
-          &:hover {
-            box-shadow: rgba(200, 210, 220, 0.9) 0px 4px 12px;
+    .container {
+      .description {
+        color: #fff;
+      }
+      form {
+        .inputWrapper {
+          .email {
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 24px;
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus {
+              -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+              font-family: "Gordita";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 24px;
+              transition: background-color 5000s ease-in-out 0s;
+            }
           }
-           .lds-dual-ring {
-            &:after {
-              border: 4px solid #000;
-              border-color: #000 transparent #000 transparent;
+          .btn {
+            color: #000000;
+            background: #fff !important;
+            &:hover {
+              box-shadow: rgba(200, 210, 220, 0.9) 0px 4px 12px;
+            }
+            .lds-dual-ring {
+              &:after {
+                border: 4px solid #000;
+                border-color: #000 transparent #000 transparent;
+              }
             }
           }
         }
       }
+      .notify {
+        color: rgba(255, 255, 255, 0.5);
+      }
     }
-    .notify {
-      color: rgba(255, 255, 255, 0.5);
-    }
-  }
   }
 }
 
@@ -294,7 +315,7 @@
           &:hover {
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           }
-           .lds-dual-ring {
+          .lds-dual-ring {
             &:after {
               border: 4px solid #fff;
               border-color: #fff transparent #fff transparent;
