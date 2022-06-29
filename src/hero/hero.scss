@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
   min-height: 100vh;
-  background: #1e1e1e;
+  background: #ffffff;
     // transition: all ease 0.125s;
   position: relative;
   &::before {
@@ -12,7 +12,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(../asstes/img/Vector.svg);
+    background-image: url(../asstes/img/Vector2.svg);
   }
   .container {
     box-sizing: border-box;
@@ -72,7 +72,7 @@
       font-weight: 400;
       font-size: 32px;
       line-height: 100%;
-      color: #ffffff;
+      color: #000000;
       //  transition: all linear 0.225s;
       @media screen and (max-width: 768px) {
         font-size: 24px;
@@ -108,7 +108,6 @@
           height: 100%;
           box-sizing: border-box;
           padding: 0 0 0 23px;
-          background: rgba(255, 255, 255, 0.05);
           border-radius: 22px;
           border: none;
           &:focus-visible {
@@ -119,7 +118,8 @@
           font-weight: 400;
           font-size: 24px;
           line-height: 100%;
-          color: rgba(255, 255, 255, 0.6);
+            background: rgba(0, 0, 0, 0.05);
+          color: rgba(0, 0, 0, 0.6);
           @media screen and (max-width: 768px) {
             font-size: 20px;
           }
@@ -144,12 +144,12 @@
           font-weight: 500;
           font-size: 24px;
           line-height: 100%;
-          color: #000000;
+           background: #000000 !important;
+          color: #fff;
           padding: 5px 10px;
             transition: all linear 0.2s;
-          background: #fff;
           &:hover {
-            box-shadow: rgba(200, 210, 220, 0.9) 0px 4px 12px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           }
           display: flex;
           align-items: center;
@@ -160,14 +160,13 @@
             height: 40px;
             &:after {
               content: " ";
-         
               margin-top: -3px;
               display: block;
               width: 40px;
               height: 40px;
               border-radius: 50%;
-              border: 4px solid #000;
-              border-color: #000 transparent #000 transparent;
+               border: 4px solid #fff;
+              border-color: #fff transparent #fff transparent;
               animation: lds-dual-ring 1.2s linear infinite;
             }
           }
@@ -214,7 +213,8 @@
       font-weight: 400;
       font-size: 24px;
       line-height: 100%;
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(0, 0, 0, 0.5);
+
       //  transition: all linear 0.225s;
       @media screen and (max-width: 768px) {
         font-size: 20px;
@@ -223,6 +223,48 @@
         font-size: 17px;
       }
     }
+  }
+  @media (prefers-color-scheme: dark) {
+       background: #1e1e1e;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../asstes/img/Vector.svg);
+    
+  }
+  .container {
+    .description {
+      color: #fff;
+    }
+    form {
+      .inputWrapper {
+        .email {
+          background: rgba(255, 255, 255, 0.05);
+          color: rgba(255, 255, 255, 0.6);
+        }
+        .btn {
+                   color: #000000;
+          background: #fff !important;
+          &:hover {
+            box-shadow: rgba(200, 210, 220, 0.9) 0px 4px 12px;
+          }
+           .lds-dual-ring {
+            &:after {
+              border: 4px solid #000;
+              border-color: #000 transparent #000 transparent;
+            }
+          }
+        }
+      }
+    }
+    .notify {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
   }
 }
 

@@ -44,7 +44,6 @@ const Hero = () => {
         <div className="logo">
           <img
             src={logo}
-            onClick={() => setActiv(!activ)}
             alt="img nout found"
           />
         </div>
